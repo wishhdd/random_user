@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+Условия
+Приложение должно представлять собой SPA на React версии не ниже 16.8. В качестве стейт менеджера использовать Redux. Для запросов к API можно использовать любой способ на усмотрение кандидата:нативный JS, jQuery, axios или другие сторонние библиотеки. Верстка должна быть реализована в соответствии с макетом, полностью вручную, без использования Bootstrap и библиотек компонентов Material UI, Ant Design и др.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Верстка должна быть резиновой (тянущейся) и адаптивной. На трех основных форм-факторах следует отрисовывать разное количество карточек на одной строке:
+- десктоп от 1200 пикс - 4 карточки
+- планшет от 768 пикс до 1199 пикс - 2 карточки
+- телефон до 767 пикс - 1 карточка
+Верстка должна быть кроссбраузерной и соответствовать макету в следующих браузерах:
+- Internet Explorer 11
+- Google Chrome, Mozilla Firefox, Safari, MS Edge последних версий. Поиск и фильтрация пользователей должны быть выполнены только на клиентской стороне, без дополнительных запросов к API.
+Реализовать тестовое задание необходимо в открытом репозитории на GitHub.
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Задание
+1. При загрузке страницы получать список из 20-30 пользователей, используя RandomUser API. Так же сделать бесконечный скроллинг. 
+2. Выводить информацию о пользователях в виде карточек
+3. Реализовать фильтрацию по полу (показывать только мужчин или только женщин)
+4. Реализовать поиск пользователей по имени, фамилии и адресу.
+5. Реализовать фильтрацию по возрастным группам
+6. Реализовать сохранение списка пользователей на стороне клиента, чтобы при загрузке страницы не нужно было делать запрос к API.
