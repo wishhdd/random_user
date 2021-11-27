@@ -1,0 +1,6 @@
+export const IS_USERS_START_LOADING = "IS_USERS_START_LOADING";
+export const IS_USERS_FINISH_LOADING = "IS_USERS_FINISH_LOADING";
+export const SET_GENDER = "SET_GENDER";
+export const SET_AGE = "SET_AGE";
+export const SET_WORD = "SET_WORD";
+export const SET_FILTERED_USERS = "SET_FILTERED_USERS";
