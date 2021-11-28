@@ -97,10 +97,10 @@ function filterUsersByAge(users, age_filter) {
     if (age_filter.age0_18 && 0 <= +user.dob.age && +user.dob.age <= 18) {
       return true;
     }
-    if (age_filter.age19_35 && 19 <= +user.dob.age && +user.dob.age <= 35) {
+    if (age_filter.age19_35 && 18 <= +user.dob.age && +user.dob.age <= 35) {
       return true;
     }
-    if (age_filter.age36_65 && 36 <= +user.dob.age && +user.dob.age <= 65) {
+    if (age_filter.age36_65 && 35 <= +user.dob.age && +user.dob.age <= 65) {
       return true;
     }
     if (age_filter.age65 && 65 <= +user.dob.age) {

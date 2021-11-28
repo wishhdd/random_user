@@ -6,7 +6,14 @@ const GetRandomUser = (state) => {
   const handlerButton = () => {
     state.loadUsers();
   };
-  return <button onClick={handlerButton}>RandomUser</button>;
+  return (
+    <button
+      className={`btn ${state.state.randomUser.loading ? "btn-load" : null}`}
+      onClick={handlerButton}
+    >
+      {state.state.randomUser.loading ? <span> &#8635; Loading...</span> : "RandomUser"}
+    </button>
+  );
 };
 
 const mapStateToProps = (state) => {

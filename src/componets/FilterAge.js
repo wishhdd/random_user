@@ -7,42 +7,50 @@ const FilterAge = (state) => {
     state.setFilterAge(event.target);
   };
   return (
-    <div>
+    <div className="filtAge">
       <strong>Фильтр по возрастным группам</strong>
-      <label>
-        <input
-          type="checkbox"
-          name="age"
-          value="age0_18"
-          defaultChecked
-          onClick={handlerCheckBox}
-        />
-        0-18
-      </label>
-      <label>
-        <input
-          type="checkbox"
-          name="age"
-          value="age19_35"
-          defaultChecked
-          onClick={handlerCheckBox}
-        />
-        19-35
-      </label>
-      <label>
-        <input
-          type="checkbox"
-          name="age"
-          value="age36_65"
-          defaultChecked
-          onClick={handlerCheckBox}
-        />
-        36-65
-      </label>
-      <label>
-        <input type="checkbox" name="age" value="age65" defaultChecked onClick={handlerCheckBox} />
-        66+
-      </label>
+      <div className="row-2">
+        <label className="col">
+          <input
+            type="checkbox"
+            name="age"
+            value="age0_18"
+            defaultChecked
+            onClick={handlerCheckBox}
+          />
+          <span className="filterText">0-18</span>
+        </label>
+        <label className="col">
+          <input
+            type="checkbox"
+            name="age"
+            value="age19_35"
+            defaultChecked
+            onClick={handlerCheckBox}
+          />
+          <span className="filterText">18-35</span>
+        </label>
+        <label className="col">
+          <input
+            type="checkbox"
+            name="age"
+            value="age36_65"
+            defaultChecked
+            onClick={handlerCheckBox}
+          />
+          <span className="filterText">35-65</span>
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="age"
+            value="age65"
+            defaultChecked
+            onClick={handlerCheckBox}
+          />
+          <span className="filterText">65+</span>
+        </label>
+      </div>
     </div>
   );
 };

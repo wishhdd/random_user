@@ -8,13 +8,9 @@ const Body = (state) => {
     localStorage.getItem("randomUser") ? state.localLoadUsers() : state.loadUsers();
   }, []);
   return (
-    <div>
+    <div className="cards filter">
       {state.state.randomUser.filteredUsers.map((user) => {
-        return (
-          <div key={user.dob.date}>
-            <Card user={user} />
-          </div>
-        );
+        return <Card user={user} key={user.dob.date} />;
       })}
     </div>
   );

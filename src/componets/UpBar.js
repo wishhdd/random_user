@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import FilterGender from "./filterGender";
+import FilterGender from "./FilterGender";
 import FilterAge from "./FilterAge";
-import InputSearch from "./inputSearch";
+import InputSearch from "./InputSearch";
 import GetRandomUser from "./GetRandomUser";
 import { filterUsers } from "../store/actions";
 
@@ -15,16 +15,16 @@ const UpBar = (state) => {
     state.state.randomUser.textSearch,
   ]);
   return (
-    <>
-      <div>
+    <div className="upBar">
+      <div className="Line">
         <GetRandomUser />
         <InputSearch />
       </div>
-      <div>
+      <div className="filter">
         <FilterGender />
         <FilterAge />
       </div>
-    </>
+    </div>
   );
 };
 

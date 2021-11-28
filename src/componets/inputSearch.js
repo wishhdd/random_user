@@ -4,11 +4,19 @@ import { textSearch } from "../store/actions";
 
 const InputSearch = (state) => {
   const handlerInput = (event) => {
-    // console.log(state.state);
-    // console.log(event.target.value);
     state.textSearch(event.target.value);
   };
-  return <input type="text" placeholder="Начните вводить..." onChange={handlerInput} />;
+  return (
+    <div className="bord">
+      <input
+        type="text"
+        className="input"
+        placeholder="Начните вводить... "
+        onChange={handlerInput}
+      />
+      <span>&#128269;</span>
+    </div>
+  );
 };
 
 const mapStateToProps = (state) => {
