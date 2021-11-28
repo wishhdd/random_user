@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import FilterGender from "./FilterGender";
 import FilterAge from "./FilterAge";
 import InputSearch from "./InputSearch";
-import GetRandomUser from "./GetRandomUser";
 import { filterUsers } from "../store/actions";
 
 const UpBar = (state) => {
@@ -17,7 +16,6 @@ const UpBar = (state) => {
   return (
     <div className="upBar">
       <div className="Line pb-10">
-        <GetRandomUser />
         <InputSearch />
       </div>
       <div className="filter">

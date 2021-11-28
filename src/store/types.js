@@ -4,3 +4,5 @@ export const SET_GENDER = "SET_GENDER";
 export const SET_AGE = "SET_AGE";
 export const SET_WORD = "SET_WORD";
 export const SET_FILTERED_USERS = "SET_FILTERED_USERS";
+export const ADD_USERS_STORE = "ADD_USERS_STORE";
+export const FIRST_LAUNCH = "FIRST_LAUNCH";

@@ -5,9 +5,12 @@ import {
   SET_AGE,
   SET_WORD,
   SET_FILTERED_USERS,
+  ADD_USERS_STORE,
+  FIRST_LAUNCH,
 } from "./types";
 
 const randomUserState = {
+  firstLaunch: false,
   loading: false,
   users: [],
   filteredUsers: [],
@@ -20,13 +23,20 @@ export const randomUserReducer = (state = randomUserState, action) => {
   switch (action.type) {
     case IS_USERS_START_LOADING:
       return { ...state, loading: true };
+    case FIRST_LAUNCH:
+      return { ...state, firstLaunch: true };
     case IS_USERS_FINISH_LOADING:
       return {
         ...state,
         users: action.payload,
         filteredUsers: action.payload,
-        // users: state.users.concat(action.payload),
-        // filteredUsers: state.users.concat(action.payload),
+        loading: false,
+        firstLaunch: false,
+      };
+    case ADD_USERS_STORE:
+      return {
+        ...state,
+        users: state.users.concat(action.payload),
         loading: false,
       };
     case SET_GENDER:

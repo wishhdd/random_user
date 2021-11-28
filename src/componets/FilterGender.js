@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { setGender } from "../store/actions";
-//
+
 const FilterGender = (state) => {
   const handlerCheckBox = (event) => {
     state.setGender(event.target.value);
@@ -9,26 +9,32 @@ const FilterGender = (state) => {
   return (
     <div className="filterGender">
       <strong>Фильтр по полу</strong>
-      <div>
-        <label className="col">
+      <div class="custom-radio">
+        <div>
           <input
-            className="inputA"
+            id="allGender"
             type="radio"
             name="gender"
             value="allGender"
             defaultChecked
             onClick={handlerCheckBox}
           />
-          <span className="filterText">Все</span>
-        </label>
-        <label className="col">
-          <input type="radio" name="gender" value="female" onClick={handlerCheckBox} />
-          <span className="filterText">Только женщины</span>
-        </label>
-        <label className="col">
-          <input type="radio" name="gender" value="male" onClick={handlerCheckBox} />
-          <span className="filterText">Только мужчины</span>
-        </label>
+          <label for="allGender">
+            <span></span>Все
+          </label>
+        </div>
+        <div>
+          <input id="female" type="radio" name="gender" value="female" onClick={handlerCheckBox} />
+          <label for="female">
+            <span></span>Только женщины
+          </label>
+        </div>
+        <div>
+          <input id="male" type="radio" name="gender" value="male" onClick={handlerCheckBox} />
+          <label for="male">
+            <span></span>Только мужчины
+          </label>
+        </div>
       </div>
     </div>
   );

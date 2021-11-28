@@ -5,15 +5,23 @@ import {
   SET_AGE,
   SET_WORD,
   SET_FILTERED_USERS,
+  ADD_USERS_STORE,
+  FIRST_LAUNCH,
 } from "./types";
 import axios from "axios";
 
+function firstLaunch() {
+  return {
+    type: FIRST_LAUNCH,
+  };
+}
+
 export function loadUsers() {
   return async (dispatch) => {
-    dispatch(loadUsersStart());
+    dispatch(firstLaunch());
     const response = await axios.get("https://randomuser.me/api/?results=28");
-    localStorage.setItem("randomUser", JSON.stringify(response.data));
-    dispatch(loadUsersFinish(response.data));
+    localStorage.setItem("randomUser", JSON.stringify(response.data.results));
+    dispatch(loadUsersFinish(response.data.results));
   };
 }
 
@@ -24,16 +32,38 @@ export function localLoadUsers() {
   };
 }
 
-function loadUsersStart() {
+export function moreLoadUsers() {
+  return async (dispatch) => {
+    dispatch(loadUsersStart());
+    const response = await axios.get("https://randomuser.me/api/?results=14");
+    const localStorageItems = JSON.parse(localStorage.getItem("randomUser"));
+    const newLocalStorageItems = localStorageItems
+      ? localStorageItems.concat(response.data.results)
+      : response.data.results;
+    localStorage.setItem("randomUser", JSON.stringify(newLocalStorageItems));
+    dispatch(addUsersToStore(response.data.results));
+  };
+}
+
+function addUsersToStore(users) {
   return {
-    type: IS_USERS_START_LOADING,
+    type: ADD_USERS_STORE,
+    payload: users,
+  };
+}
+
+export function loadUsersStart() {
+  return (dispatch) => {
+    dispatch({
+      type: IS_USERS_START_LOADING,
+    });
   };
 }
 
 function loadUsersFinish(users) {
   return {
     type: IS_USERS_FINISH_LOADING,
-    payload: users.results,
+    payload: users,
   };
 }
 
@@ -78,7 +108,7 @@ export function filterUsers(state) {
 }
 
 function filterUsersByText(state) {
-  const filteredUsers = state.users.filter(
+  const filteredUsers = state.users?.filter(
     (user) =>
       user.name.first.toLowerCase().includes(state.textSearch.toLowerCase()) ||
       user.name.last.toLowerCase().includes(state.textSearch.toLowerCase()) ||

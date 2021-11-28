@@ -2,7 +2,7 @@ import React from "react";
 
 export const Card = ({ user }) => {
   return (
-    <div className="card Line colCard">
+    <div className="card Line">
       <img src={user.picture.large} alt={`Foto ${user.name.first}`} />
       <div>
         <strong>
