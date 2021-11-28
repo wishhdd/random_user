@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { textSearch } from "../store/actions";
-
+//
 const InputSearch = (state) => {
   const handlerInput = (event) => {
     state.textSearch(event.target.value);

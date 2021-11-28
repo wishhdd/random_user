@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { setGender } from "../store/actions";
-
+//
 const FilterGender = (state) => {
   const handlerCheckBox = (event) => {
     state.setGender(event.target.value);
