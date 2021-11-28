@@ -16,7 +16,7 @@ const UpBar = (state) => {
   ]);
   return (
     <div className="upBar">
-      <div className="Line">
+      <div className="Line pb-10">
         <GetRandomUser />
         <InputSearch />
       </div>

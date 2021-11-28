@@ -11,7 +11,7 @@ import axios from "axios";
 export function loadUsers() {
   return async (dispatch) => {
     dispatch(loadUsersStart());
-    const response = await axios.get("https://randomuser.me/api/?results=30");
+    const response = await axios.get("https://randomuser.me/api/?results=28");
     localStorage.setItem("randomUser", JSON.stringify(response.data));
     dispatch(loadUsersFinish(response.data));
   };

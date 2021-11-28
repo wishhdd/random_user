@@ -16,8 +16,7 @@ code {
   top: 0;
   background-color: #fafafa;
   margin: 10px 20px 0 10px;
-  padding: 10px;
-  padding-top: 20px;
+  padding: 20px 10px 0 10px;
 }
 
 .filter {
@@ -71,12 +70,15 @@ code {
 .row-2 {
   column-count: 2;
 }
+.pb-10 {
+  padding-bottom: 10px;
+}
 
 .filterGender {
-  min-width: 180px;
+  min-width: 200px;
 }
 .filtAge {
-  min-width: 180px;
+  min-width: 200px;
 }
 
 .filterText {
@@ -107,11 +109,26 @@ img {
   /* min-width: 263px;
   flex: 263px; */
 
-  width: calc(calc(100% - 80px) / 4);
+  width: 263px;
   font-size: 12px;
 }
 
 @media (min-width: 1200px) {
+  .colCard {
+    width: calc(calc(100% - 80px) / 4);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .colCard {
+    width: calc(calc(100% - 40px) / 2);
+  }
+}
+
+@media (max-width: 767px) {
+  .colCard {
+    width: calc(100% - 20px);
+  }
 }
 
 /*
