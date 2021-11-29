@@ -19,7 +19,7 @@ const FilterAge = (state) => {
           onClick={handlerCheckBox}
           className="col"
         />
-        <label for="age0_18" className="col">
+        <label htmlFor="age0_18" className="col">
           0-18
         </label>
         <input
@@ -31,7 +31,7 @@ const FilterAge = (state) => {
           onClick={handlerCheckBox}
           className="col"
         />
-        <label for="age19_35" className="col">
+        <label htmlFor="age19_35" className="col">
           18-35
         </label>
         <input
@@ -43,7 +43,7 @@ const FilterAge = (state) => {
           onClick={handlerCheckBox}
           className="col"
         />
-        <label for="age36_65" className="col">
+        <label htmlFor="age36_65" className="col">
           35-65
         </label>
         <input
@@ -55,7 +55,7 @@ const FilterAge = (state) => {
           onClick={handlerCheckBox}
           className="col"
         />
-        <label for="age65" className="col">
+        <label htmlFor="age65" className="col">
           65+
         </label>
       </div>

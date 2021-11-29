@@ -9,7 +9,7 @@ const FilterGender = (state) => {
   return (
     <div className="filterGender">
       <strong>Фильтр по полу</strong>
-      <div class="custom-radio">
+      <div className="custom-radio">
         <div>
           <input
             id="allGender"
@@ -19,19 +19,19 @@ const FilterGender = (state) => {
             defaultChecked
             onClick={handlerCheckBox}
           />
-          <label for="allGender">
+          <label htmlFor="allGender">
             <span></span>Все
           </label>
         </div>
         <div>
           <input id="female" type="radio" name="gender" value="female" onClick={handlerCheckBox} />
-          <label for="female">
+          <label htmlFor="female">
             <span></span>Только женщины
           </label>
         </div>
         <div>
           <input id="male" type="radio" name="gender" value="male" onClick={handlerCheckBox} />
-          <label for="male">
+          <label htmlFor="male">
             <span></span>Только мужчины
           </label>
         </div>
