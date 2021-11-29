@@ -1,5 +1,6 @@
 import React from "react";
 import { createStore, applyMiddleware, compose } from "redux";
+import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import { rootReducer } from "./store/rootReducer";
@@ -10,10 +11,12 @@ const store = createStore(rootReducer, compose(applyMiddleware(thunk)));
 
 function App() {
   return (
-    <Provider store={store}>
-      <UpBar />
-      <Body />
-    </Provider>
+    <BrowserRouter basename={"/RandomUser"}>
+      <Provider store={store}>
+        <UpBar />
+        <Body />
+      </Provider>
+    </BrowserRouter>
   );
 }
 
