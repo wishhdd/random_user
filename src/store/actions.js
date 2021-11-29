@@ -35,7 +35,7 @@ export function localLoadUsers() {
 export function moreLoadUsers() {
   return async (dispatch) => {
     dispatch(loadUsersStart());
-    const response = await axios.get("https://randomuser.me/api/?results=14");
+    const response = await axios.get("https://randomuser.me/api/?results=12");
     const localStorageItems = JSON.parse(localStorage.getItem("randomUser"));
     const newLocalStorageItems = localStorageItems
       ? localStorageItems.concat(response.data.results)
