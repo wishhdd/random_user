@@ -10,45 +10,53 @@ const FilterAge = (state) => {
     <div className="filtAge">
       <strong>Фильтр по возрастным группам</strong>
       <div className="row-2">
-        <label className="col">
-          <input
-            type="checkbox"
-            name="age"
-            value="age0_18"
-            defaultChecked
-            onClick={handlerCheckBox}
-          />
-          <span className="filterText">0-18</span>
+        <input
+          type="checkbox"
+          name="age"
+          value="age0_18"
+          defaultChecked
+          id="age0_18"
+          onClick={handlerCheckBox}
+          className="col"
+        />
+        <label for="age0_18" className="col">
+          0-18
         </label>
-        <label className="col">
-          <input
-            type="checkbox"
-            name="age"
-            value="age19_35"
-            defaultChecked
-            onClick={handlerCheckBox}
-          />
-          <span className="filterText">18-35</span>
+        <input
+          type="checkbox"
+          name="age"
+          value="age19_35"
+          defaultChecked
+          id="age19_35"
+          onClick={handlerCheckBox}
+          className="col"
+        />
+        <label for="age19_35" className="col">
+          18-35
         </label>
-        <label className="col">
-          <input
-            type="checkbox"
-            name="age"
-            value="age36_65"
-            defaultChecked
-            onClick={handlerCheckBox}
-          />
-          <span className="filterText">35-65</span>
+        <input
+          type="checkbox"
+          name="age"
+          value="age36_65"
+          defaultChecked
+          id="age36_65"
+          onClick={handlerCheckBox}
+          className="col"
+        />
+        <label for="age36_65" className="col">
+          35-65
         </label>
-        <label>
-          <input
-            type="checkbox"
-            name="age"
-            value="age65"
-            defaultChecked
-            onClick={handlerCheckBox}
-          />
-          <span className="filterText">65+</span>
+        <input
+          type="checkbox"
+          name="age"
+          value="age65"
+          defaultChecked
+          id="age65"
+          onClick={handlerCheckBox}
+          className="col"
+        />
+        <label for="age65" className="col">
+          65+
         </label>
       </div>
     </div>
